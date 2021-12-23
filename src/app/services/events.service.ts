@@ -9,15 +9,15 @@ import { Event } from '../models/event.interface';
 export class EventsService {
   private headers: HttpHeaders;
   constructor(private http: HttpClient) {
-    this.headers = new HttpHeaders();
+    this.headers = new HttpHeaders({ 'Content-type': 'application/json' });
   }
 
   getAllEvents(): Observable<Event[]> {
-    this.http
-      .get<string>('https://www.cultura.gal/v1/axenda/')
-      .subscribe((res) => console.info(res));
     return this.http.get<Event[]>(
-      'https://www.cultura.gal/v1/axenda/eventos.json?idioma=gl&concello=270'
+      'https://www.cultura.gal/v1/axenda/eventos.json?idioma=gl&concello=270',
+      {
+        headers: this.headers,
+      }
     );
   }
 }
