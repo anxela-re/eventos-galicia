@@ -15,9 +15,7 @@ export class EventsService {
   getAllEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(
       'https://www.cultura.gal/v1/axenda/eventos.json?idioma=gl&concello=270',
-      {
-        headers: this.headers,
-      }
+      
     );
   }
 }
