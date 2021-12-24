@@ -20,18 +20,35 @@
       <p *ngIf="!event.dates.start.dateTime">
         {{ event.dates.start.localDate | date: "MMM d, y" }}
       </p>
-      <div *ngFor="let price of event.priceRanges">
-        <p>
-          {{ price.type }}: {{ price.min }} {{ price.currency }} -
-          {{ price.max }}
-          {{ price.currency }}
-        </p>
+      <p>
+        <a
+          class=""
+          data-bs-toggle="collapse"
+          href="#collapsePrices"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapsePrices"
+        >
+          Ver precios
+        </a>
+      </p>
+      <div class="collapse" id="collapsePrices">
+        <div class="card card-body">
+          <div *ngFor="let price of event.priceRanges">
+            <p>
+              {{ price.type }}: {{ price.min }} {{ price.currency }} -
+              {{ price.max }}
+              {{ price.currency }}
+            </p>
+          </div>
+        </div>
       </div>
-
-      <a [href]="event.url">Ver en TicketMaster</a>
     </div>
     <div class="col-12 pt-2">
-      <a [routerLink]="['/']" class="btn btn-danger">Back</a>
+      <a [href]="event.url" class="btn btn-primary m-1" target="_blank"
+        >Ver en TicketMaster</a
+      >
+      <a [routerLink]="['/']" class="btn btn-danger m-1">Back</a>
     </div>
   </div>
 </div>

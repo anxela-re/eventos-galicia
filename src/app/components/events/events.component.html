@@ -1,12 +1,13 @@
 <div class="container">
-  <h1>Eventos Galicia</h1>
-  <div class="card-group gap-1">
+  <h1>Eventos Santiago de Compostela</h1>
+  <div class="d-flex flex-wrap">
     <div
       *ngFor="let event of events"
-      class="card animate__animated animate__bounce animate__fadeIn"
-      style="max-width: 18rem; cursor: pointer; min-width: 18rem"
+      class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 p-1"
+      style=" cursor: pointer;"
       [routerLink]="['/event', event.id]"
     >
+    <div class="card animate__animated animate__bounce animate__fadeIn h-100 ">
       <img
         [src]="event.images[0].url"
         class="card-img-top"
@@ -34,6 +35,8 @@
           <small class="text-muted">{{ event.dates.status.code }}</small>
         </p>
       </div>
+
+    </div>
     </div>
   </div>
 </div>

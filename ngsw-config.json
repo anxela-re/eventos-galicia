@@ -14,7 +14,9 @@
           "/*.js"
         ],
         "urls": [
-          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
+          "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js",
+          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         ]
       }
     },
@@ -33,7 +35,9 @@
   "dataGroups": [
     {
       "name": "ticketmaster-api",
-      "urls": ["https://app.ticketmaster.com/discovery/v2/**"],
+      "urls": [
+        "https://app.ticketmaster.com/discovery/v2/**"
+      ],
       "cacheConfig": {
         "maxSize": 20,
         "maxAge": "1d",
