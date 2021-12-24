@@ -12,6 +12,9 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls": [
+          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         ]
       }
     },
@@ -24,6 +27,18 @@
           "/assets/**",
           "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "ticketmaster-api",
+      "urls": ["https://app.ticketmaster.com/discovery/v2/**"],
+      "cacheConfig": {
+        "maxSize": 20,
+        "maxAge": "1d",
+        "timeout": "1s",
+        "strategy": "freshness"
       }
     }
   ]

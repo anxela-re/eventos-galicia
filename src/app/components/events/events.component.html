@@ -1,1 +1,39 @@
-<p>events works!</p>
+<div class="container">
+  <h1>Eventos Galicia</h1>
+  <div class="card-group gap-1">
+    <div
+      *ngFor="let event of events"
+      class="card animate__animated animate__bounce animate__fadeIn"
+      style="max-width: 18rem; cursor: pointer; min-width: 18rem"
+      [routerLink]="['/event', event.id]"
+    >
+      <img
+        [src]="event.images[0].url"
+        class="card-img-top"
+        [alt]="event.name"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ event.name }}</h5>
+        <p class="card-text">
+          <small class="text-muted" *ngIf="event.dates.start.dateTime">{{
+            event.dates.start.dateTime | date: "MMM d, y, h:mm:ss a"
+          }}</small>
+          <small class="text-muted" *ngIf="!event.dates.start.dateTime">
+            {{ event.dates.start.localDate | date: "MMM d, y" }}
+          </small>
+        </p>
+        <p class="card-text">
+          <span
+            class="badge badge-pill"
+            style="color: #fff; background-color: #212121"
+            *ngFor="let venue of event._embedded?.venues"
+            >{{ venue.name }}</span
+          >
+        </p>
+        <p class="card-text">
+          <small class="text-muted">{{ event.dates.status.code }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

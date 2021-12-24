@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    padding: 1rem;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: currentColor;
+}

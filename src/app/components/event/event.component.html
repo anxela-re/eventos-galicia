@@ -1,1 +1,37 @@
-<p>event works!</p>
+<div class="container">
+  <div
+    *ngIf="event"
+    class="row animate__animated animate__bounce animate__fadeIn"
+  >
+    <div class="col-xs-12 col-lg-6">
+      <img [src]="event.images[0].url" alt="" style="width: 100%" />
+    </div>
+    <div class="col-xs-12 col-lg-6">
+      <h1>{{ event.name }}</h1>
+      <span
+        class="badge badge-pill"
+        style="color: #fff; background-color: #212121"
+        *ngFor="let venue of event._embedded?.venues"
+        >{{ venue.name }}</span
+      >
+      <p *ngIf="event.dates.start.dateTime" class="pt-1">
+        {{ event.dates.start.dateTime | date: "MMM d, y, h:mm:ss a" }}
+      </p>
+      <p *ngIf="!event.dates.start.dateTime">
+        {{ event.dates.start.localDate | date: "MMM d, y" }}
+      </p>
+      <div *ngFor="let price of event.priceRanges">
+        <p>
+          {{ price.type }}: {{ price.min }} {{ price.currency }} -
+          {{ price.max }}
+          {{ price.currency }}
+        </p>
+      </div>
+
+      <a [href]="event.url">Ver en TicketMaster</a>
+    </div>
+    <div class="col-12 pt-2">
+      <a [routerLink]="['/']" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
