@@ -1,0 +1,104 @@
+{
+  "configVersion": 1,
+  "timestamp": 1641201266099,
+  "index": "/eventos-galicia/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/eventos-galicia/favicon.ico",
+        "/eventos-galicia/index.html",
+        "/eventos-galicia/main.424439b0981c15b86fcb.js",
+        "/eventos-galicia/manifest.webmanifest",
+        "/eventos-galicia/polyfills.530452edcd5d1c29c617.js",
+        "/eventos-galicia/runtime.899a4ec5ad1f58e549c4.js",
+        "/eventos-galicia/styles.1f5051e56cba643884a5.css"
+      ],
+      "patterns": [
+        "https:\\/\\/cdn\\.jsdelivr\\.net\\/npm\\/bootstrap@5\\.0\\.2\\/dist\\/css\\/bootstrap\\.min\\.css",
+        "https:\\/\\/cdn\\.jsdelivr\\.net\\/npm\\/@popperjs\\/core@2\\.9\\.2\\/dist\\/umd\\/popper\\.min\\.js",
+        "https:\\/\\/cdn\\.jsdelivr\\.net\\/npm\\/bootstrap@5\\.0\\.2\\/dist\\/js\\/bootstrap\\.min\\.js"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/eventos-galicia/assets/css/animate.css",
+        "/eventos-galicia/assets/icons/icon-128x128.png",
+        "/eventos-galicia/assets/icons/icon-144x144.png",
+        "/eventos-galicia/assets/icons/icon-152x152.png",
+        "/eventos-galicia/assets/icons/icon-192x192.png",
+        "/eventos-galicia/assets/icons/icon-384x384.png",
+        "/eventos-galicia/assets/icons/icon-512x512.png",
+        "/eventos-galicia/assets/icons/icon-72x72.png",
+        "/eventos-galicia/assets/icons/icon-96x96.png",
+        "/eventos-galicia/assets/icons/icon.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "ticketmaster-api",
+      "patterns": [
+        "https:\\/\\/app\\.ticketmaster\\.com\\/discovery\\/v2\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 86400000,
+      "timeoutMs": 1000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/eventos-galicia/assets/css/animate.css": "3dc70f1a3c29089a27418c9ce431cb439f41a5ad",
+    "/eventos-galicia/assets/icons/icon-128x128.png": "2e45ddd470a7e9380e80d2c7a518aaee8abe0596",
+    "/eventos-galicia/assets/icons/icon-144x144.png": "ff6a91ee2cf564f43fd6096a9f9cdb9ae8f51824",
+    "/eventos-galicia/assets/icons/icon-152x152.png": "c97edd0cbad6861bb485b34f0e0c85be0117fe07",
+    "/eventos-galicia/assets/icons/icon-192x192.png": "9e1f45209ed9bce08d4c883ae07fb8366ac7a626",
+    "/eventos-galicia/assets/icons/icon-384x384.png": "9c95369337b64148107fc9319f36c95e4d9aa970",
+    "/eventos-galicia/assets/icons/icon-512x512.png": "1468b355440ac64d4b80f8ba62ce366a084bbd01",
+    "/eventos-galicia/assets/icons/icon-72x72.png": "54c0b5198a329bb5da577c171c36dabc250b2bb6",
+    "/eventos-galicia/assets/icons/icon-96x96.png": "4f6e59c3249d486c93e5ca959dfa6b4b28b9fde1",
+    "/eventos-galicia/assets/icons/icon.png": "a15bb5e30aeafd7a152483e9a955f674ebff600f",
+    "/eventos-galicia/favicon.ico": "3196cde8de75c1deb73a9abab0a9677299573b70",
+    "/eventos-galicia/index.html": "f4408d52a79cb773a653633bdb1fc1ce68d5a6c9",
+    "/eventos-galicia/main.424439b0981c15b86fcb.js": "eb10cc0776a597b06317e42aaad19620442c87a6",
+    "/eventos-galicia/manifest.webmanifest": "243272653c99f49afcb284e1aa3a5b83f102c5f9",
+    "/eventos-galicia/polyfills.530452edcd5d1c29c617.js": "a76d8596ccf65229db784b5ceae6a962251f60f3",
+    "/eventos-galicia/runtime.899a4ec5ad1f58e549c4.js": "716a266e03dc05c41d3e4935ad35642e8d609d78",
+    "/eventos-galicia/styles.1f5051e56cba643884a5.css": "723807acf5b67ee28c93c488dd40bc54ce91d3f0"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
